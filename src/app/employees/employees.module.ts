@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TableComponent } from './components/table/table.component';
 import { CreateComponent } from './components/create/create.component';
+import { EmployeesRoutingModule } from './employees-routing.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { CreateComponent } from './components/create/create.component';
     CreateComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    EmployeesRoutingModule
   ]
 })
 export class EmployeesModule { }
