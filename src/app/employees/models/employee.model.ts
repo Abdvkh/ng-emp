@@ -3,7 +3,7 @@ export enum Gender {
   Female,
 }
 
-export interface Empoyee {
+export interface Employee {
   email: string;
   mobile: string;
   firstName: string;

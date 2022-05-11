@@ -1,1 +1,8 @@
-<p>dashboard works!</p>
+<mat-grid-list [cols]="3">
+  <mat-grid-tile [colspan]="2">
+    <ngx-charts-number-card [view]="[400,200]" [results]="totalEmployees"></ngx-charts-number-card>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1">
+    <ngx-charts-pie-chart [view]="[400,400]" [results]="employeesGender" [labels]="true"></ngx-charts-pie-chart>
+  </mat-grid-tile>
+</mat-grid-list>

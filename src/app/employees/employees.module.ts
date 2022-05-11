@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TableComponent } from './components/table/table.component';
 import { CreateComponent } from './components/create/create.component';
 import { EmployeesRoutingModule } from './employees-routing.module';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { EmployeesRoutingModule } from './employees-routing.module';
   ],
   imports: [
     CommonModule,
-    EmployeesRoutingModule
+    EmployeesRoutingModule,
+    AgGridModule.withComponents([])
   ]
 })
 export class EmployeesModule { }
