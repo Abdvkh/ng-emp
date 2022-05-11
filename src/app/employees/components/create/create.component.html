@@ -1,1 +1,42 @@
-<p>create works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>First name</mat-label>
+      <input formControlName="firstName" matInput placeholder="John doe">
+    </mat-form-field>
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Last name</mat-label>
+      <input formControlName="lastName" matInput placeholder="John doe">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="John doe">
+    </mat-form-field>
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Mobile</mat-label>
+      <input formControlName="mobile" matInput placeholder="John doe">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-button-toggle-group formControlName="gender" aria-label="Gender" appearance="outline">
+      <mat-button-toggle value="Male">Male</mat-button-toggle>
+      <mat-button-toggle value="Female">Female</mat-button-toggle>
+    </mat-button-toggle-group>
+    <mat-slide-toggle formControlName="isActive">Active</mat-slide-toggle>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Choose birth date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="birthday">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div>
+    <button type="submit" mat-raised-button color="primary">Save</button>
+    <button type="button" mat-raised-button  color="basic" (click)="onCancel()">Cancel</button>
+  </div>
+</form>

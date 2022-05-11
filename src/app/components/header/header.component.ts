@@ -9,9 +9,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from
 export class HeaderComponent {
   @Output() menuToggled = new EventEmitter<boolean>();
 
-  user: string = 'Enea';
-
-  // constructor(private authService: AuthService) { }
+  user: string = 'Abubakr';
 
   logout(): void {
     console.log('Logged out');
